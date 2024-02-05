@@ -14,7 +14,7 @@ MAINTAINER Florian Mauduit <f@lf.je>
 ###
 
 ## Server Port
-ENV BLYNK_SERVER_VERSION 0.41.16
+ENV BLYNK_SERVER_VERSION 0.41.17
 ENV HARDWARE_MQTT_PORT 8440
 ENV HTTP_PORT 8080
 ENV HTTPS_PORT 9443
@@ -77,7 +77,7 @@ RUN apt install -y curl
 ############################################################
 
 RUN mkdir /blynk
-RUN curl -L https://github.com/blynkkk/blynk-server/releases/download/v${BLYNK_SERVER_VERSION}/server-${BLYNK_SERVER_VERSION}.jar > /blynk/server.jar
+RUN curl -L https://github.com/rodrigopdcouto/blynk-server/raw/master/server/Docker/server-0.41.17.jar > /blynk/server.jar
 
 RUN mkdir /data
 RUN mkdir /config && touch /config/server.properties
